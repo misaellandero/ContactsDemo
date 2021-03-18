@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F16826B2602964800F61F18 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F16826A2602964800F61F18 /* TagLabel.swift */; };
+		7F1682732602AA9C00F61F18 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682712602AA9C00F61F18 /* SideBarView.swift */; };
+		7F1682772602AAAE00F61F18 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682762602AAAE00F61F18 /* TabBarView.swift */; };
+		7F1682782602AAAE00F61F18 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682762602AAAE00F61F18 /* TabBarView.swift */; };
+		7F16827F2602AE1000F61F18 /* ContactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CCD26028B05007DF29A /* ContactsList.swift */; };
+		7F1682822602AE1800F61F18 /* ContactsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CD126028B15007DF29A /* ContactsRow.swift */; };
+		7F1682852602AE1A00F61F18 /* ContactsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CD526028B23007DF29A /* ContactsDetail.swift */; };
+		7F1682882602AE6E00F61F18 /* DataStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24633B26017AF2002385D7 /* DataStoreModel.swift */; };
+		7F16828B2602AE7100F61F18 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24631F26017361002385D7 /* ContactsModel.swift */; };
+		7F16828E2602AE7400F61F18 /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2463252601736D002385D7 /* TagsModel.swift */; };
+		7F1682912602AE7D00F61F18 /* AppColorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24632A2601753D002385D7 /* AppColorsModel.swift */; };
+		7F1682942602AE8900F61F18 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F16826A2602964800F61F18 /* TagLabel.swift */; };
+		7F1682972602AE9200F61F18 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F246337260179C1002385D7 /* DataStore.swift */; };
+		7F16829A2602AEA500F61F18 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24633126017554002385D7 /* DateFormatterExtension.swift */; };
+		7F16829D2602AEAE00F61F18 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24633026017554002385D7 /* BindingExtension.swift */; };
+		7F1682A02602AEB100F61F18 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24632F26017554002385D7 /* ColorExtension.swift */; };
+		7F1682A92602B35600F61F18 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682712602AA9C00F61F18 /* SideBarView.swift */; };
+		7F1682AD2602B9B400F61F18 /* ContactsFormNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682AC2602B9B400F61F18 /* ContactsFormNew.swift */; };
+		7F1682AE2602B9B400F61F18 /* ContactsFormNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682AC2602B9B400F61F18 /* ContactsFormNew.swift */; };
+		7F1682B42602BB6900F61F18 /* EmojiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682B22602BB6900F61F18 /* EmojiButton.swift */; };
+		7F1682B52602BB6900F61F18 /* EmojiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682B22602BB6900F61F18 /* EmojiButton.swift */; };
+		7F1682B62602BB6900F61F18 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682B32602BB6900F61F18 /* EmojiPicker.swift */; };
+		7F1682B72602BB6900F61F18 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682B32602BB6900F61F18 /* EmojiPicker.swift */; };
+		7F1682BC2602BB7C00F61F18 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682BB2602BB7C00F61F18 /* Emojis.swift */; };
+		7F1682BD2602BB7C00F61F18 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682BB2602BB7C00F61F18 /* Emojis.swift */; };
+		7F243CCE26028B05007DF29A /* ContactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CCD26028B05007DF29A /* ContactsList.swift */; };
+		7F243CD226028B15007DF29A /* ContactsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CD126028B15007DF29A /* ContactsRow.swift */; };
+		7F243CD626028B23007DF29A /* ContactsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CD526028B23007DF29A /* ContactsDetail.swift */; };
 		7F24632026017361002385D7 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24631F26017361002385D7 /* ContactsModel.swift */; };
 		7F2463262601736D002385D7 /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2463252601736D002385D7 /* TagsModel.swift */; };
 		7F24632B2601753E002385D7 /* AppColorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24632A2601753D002385D7 /* AppColorsModel.swift */; };
@@ -21,9 +49,23 @@
 		7F41744526007F9400AD22BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41743026007F8E00AD22BD /* ContentView.swift */; };
 		7F41744626007F9400AD22BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F41743126007F9400AD22BD /* Assets.xcassets */; };
 		7F41744726007F9400AD22BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F41743126007F9400AD22BD /* Assets.xcassets */; };
+		7F71E2832602F179000CDC78 /* TagPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71E2822602F178000CDC78 /* TagPicker.swift */; };
+		7F71E2842602F179000CDC78 /* TagPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71E2822602F178000CDC78 /* TagPicker.swift */; };
+		7F71E2882602F3C7000CDC78 /* TagNewForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71E2872602F3C7000CDC78 /* TagNewForm.swift */; };
+		7F71E2892602F3C7000CDC78 /* TagNewForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71E2872602F3C7000CDC78 /* TagNewForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F16826A2602964800F61F18 /* TagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
+		7F1682712602AA9C00F61F18 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
+		7F1682762602AAAE00F61F18 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		7F1682AC2602B9B400F61F18 /* ContactsFormNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFormNew.swift; sourceTree = "<group>"; };
+		7F1682B22602BB6900F61F18 /* EmojiButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiButton.swift; sourceTree = "<group>"; };
+		7F1682B32602BB6900F61F18 /* EmojiPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
+		7F1682BB2602BB7C00F61F18 /* Emojis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
+		7F243CCD26028B05007DF29A /* ContactsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsList.swift; sourceTree = "<group>"; };
+		7F243CD126028B15007DF29A /* ContactsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRow.swift; sourceTree = "<group>"; };
+		7F243CD526028B23007DF29A /* ContactsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetail.swift; sourceTree = "<group>"; };
 		7F24631F26017361002385D7 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
 		7F2463252601736D002385D7 /* TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsModel.swift; sourceTree = "<group>"; };
 		7F24632A2601753D002385D7 /* AppColorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColorsModel.swift; sourceTree = "<group>"; };
@@ -40,6 +82,8 @@
 		7F41743E26007F9400AD22BD /* ContactsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F41744026007F9400AD22BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F41744126007F9400AD22BD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		7F71E2822602F178000CDC78 /* TagPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPicker.swift; sourceTree = "<group>"; };
+		7F71E2872602F3C7000CDC78 /* TagNewForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagNewForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +104,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F16826E2602A66500F61F18 /* Navigations */ = {
+			isa = PBXGroup;
+			children = (
+				7F1682712602AA9C00F61F18 /* SideBarView.swift */,
+				7F1682762602AAAE00F61F18 /* TabBarView.swift */,
+			);
+			path = Navigations;
+			sourceTree = "<group>";
+		};
+		7F1682B12602BB6900F61F18 /* EmojiPicker */ = {
+			isa = PBXGroup;
+			children = (
+				7F1682B22602BB6900F61F18 /* EmojiButton.swift */,
+				7F1682B32602BB6900F61F18 /* EmojiPicker.swift */,
+			);
+			path = EmojiPicker;
+			sourceTree = "<group>";
+		};
+		7F1682BA2602BB7C00F61F18 /* Emojis */ = {
+			isa = PBXGroup;
+			children = (
+				7F1682BB2602BB7C00F61F18 /* Emojis.swift */,
+			);
+			path = Emojis;
+			sourceTree = "<group>";
+		};
+		7F243CD926028CE2007DF29A /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				7F243CCD26028B05007DF29A /* ContactsList.swift */,
+				7F243CD126028B15007DF29A /* ContactsRow.swift */,
+				7F243CD526028B23007DF29A /* ContactsDetail.swift */,
+				7F1682AC2602B9B400F61F18 /* ContactsFormNew.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		7F243CDA26028CED007DF29A /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				7F16826A2602964800F61F18 /* TagLabel.swift */,
+				7F71E2822602F178000CDC78 /* TagPicker.swift */,
+				7F71E2872602F3C7000CDC78 /* TagNewForm.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
 		7F24631B26017319002385D7 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +172,10 @@
 		7F24631D2601732D002385D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F1682B12602BB6900F61F18 /* EmojiPicker */,
+				7F16826E2602A66500F61F18 /* Navigations */,
+				7F243CDA26028CED007DF29A /* Tags */,
+				7F243CD926028CE2007DF29A /* Contacts */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -88,6 +183,7 @@
 		7F24631E26017332002385D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F1682BA2602BB7C00F61F18 /* Emojis */,
 				7F2463292601753D002385D7 /* Colors */,
 				7F24633B26017AF2002385D7 /* DataStoreModel.swift */,
 				7F24631F26017361002385D7 /* ContactsModel.swift */,
@@ -260,15 +356,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F41744426007F9400AD22BD /* ContentView.swift in Sources */,
+				7F1682A92602B35600F61F18 /* SideBarView.swift in Sources */,
+				7F1682BC2602BB7C00F61F18 /* Emojis.swift in Sources */,
+				7F1682AD2602B9B400F61F18 /* ContactsFormNew.swift in Sources */,
 				7F24632026017361002385D7 /* ContactsModel.swift in Sources */,
+				7F1682772602AAAE00F61F18 /* TabBarView.swift in Sources */,
 				7F2463262601736D002385D7 /* TagsModel.swift in Sources */,
+				7F243CD226028B15007DF29A /* ContactsRow.swift in Sources */,
+				7F243CD626028B23007DF29A /* ContactsDetail.swift in Sources */,
 				7F24633C26017AF2002385D7 /* DataStoreModel.swift in Sources */,
 				7F24633226017554002385D7 /* ColorExtension.swift in Sources */,
+				7F71E2832602F179000CDC78 /* TagPicker.swift in Sources */,
 				7F24632B2601753E002385D7 /* AppColorsModel.swift in Sources */,
 				7F24633326017554002385D7 /* BindingExtension.swift in Sources */,
 				7F24633426017554002385D7 /* DateFormatterExtension.swift in Sources */,
+				7F1682B62602BB6900F61F18 /* EmojiPicker.swift in Sources */,
 				7F246338260179C1002385D7 /* DataStore.swift in Sources */,
+				7F1682B42602BB6900F61F18 /* EmojiButton.swift in Sources */,
+				7F16826B2602964800F61F18 /* TagLabel.swift in Sources */,
+				7F71E2882602F3C7000CDC78 /* TagNewForm.swift in Sources */,
 				7F41744226007F9400AD22BD /* ContactsDemoApp.swift in Sources */,
+				7F243CCE26028B05007DF29A /* ContactsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +384,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F16829D2602AEAE00F61F18 /* BindingExtension.swift in Sources */,
+				7F1682972602AE9200F61F18 /* DataStore.swift in Sources */,
+				7F1682BD2602BB7C00F61F18 /* Emojis.swift in Sources */,
+				7F1682AE2602B9B400F61F18 /* ContactsFormNew.swift in Sources */,
+				7F16827F2602AE1000F61F18 /* ContactsList.swift in Sources */,
+				7F16829A2602AEA500F61F18 /* DateFormatterExtension.swift in Sources */,
+				7F16828B2602AE7100F61F18 /* ContactsModel.swift in Sources */,
+				7F1682732602AA9C00F61F18 /* SideBarView.swift in Sources */,
 				7F41744526007F9400AD22BD /* ContentView.swift in Sources */,
+				7F1682822602AE1800F61F18 /* ContactsRow.swift in Sources */,
+				7F1682912602AE7D00F61F18 /* AppColorsModel.swift in Sources */,
+				7F71E2842602F179000CDC78 /* TagPicker.swift in Sources */,
+				7F1682782602AAAE00F61F18 /* TabBarView.swift in Sources */,
 				7F41744326007F9400AD22BD /* ContactsDemoApp.swift in Sources */,
+				7F1682A02602AEB100F61F18 /* ColorExtension.swift in Sources */,
+				7F1682B72602BB6900F61F18 /* EmojiPicker.swift in Sources */,
+				7F1682852602AE1A00F61F18 /* ContactsDetail.swift in Sources */,
+				7F1682B52602BB6900F61F18 /* EmojiButton.swift in Sources */,
+				7F1682942602AE8900F61F18 /* TagLabel.swift in Sources */,
+				7F71E2892602F3C7000CDC78 /* TagNewForm.swift in Sources */,
+				7F16828E2602AE7400F61F18 /* TagsModel.swift in Sources */,
+				7F1682882602AE6E00F61F18 /* DataStoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

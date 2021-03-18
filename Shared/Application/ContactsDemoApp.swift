@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ContactsDemoApp: App {
+    
+    // Data store
+    var datastore = DataStore()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(datastore)
         }
     }
 }
