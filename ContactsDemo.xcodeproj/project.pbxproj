@@ -29,6 +29,8 @@
 		7F1682B72602BB6900F61F18 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682B32602BB6900F61F18 /* EmojiPicker.swift */; };
 		7F1682BC2602BB7C00F61F18 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682BB2602BB7C00F61F18 /* Emojis.swift */; };
 		7F1682BD2602BB7C00F61F18 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1682BB2602BB7C00F61F18 /* Emojis.swift */; };
+		7F192E3A2605861F00364929 /* SettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F192E392605861F00364929 /* SettingsList.swift */; };
+		7F192E3D2605885500364929 /* SettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F192E392605861F00364929 /* SettingsList.swift */; };
 		7F243CCE26028B05007DF29A /* ContactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CCD26028B05007DF29A /* ContactsList.swift */; };
 		7F243CD226028B15007DF29A /* ContactsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CD126028B15007DF29A /* ContactsRow.swift */; };
 		7F243CD626028B23007DF29A /* ContactsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F243CD526028B23007DF29A /* ContactsDetail.swift */; };
@@ -54,6 +56,7 @@
 		7F1682B22602BB6900F61F18 /* EmojiButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiButton.swift; sourceTree = "<group>"; };
 		7F1682B32602BB6900F61F18 /* EmojiPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		7F1682BB2602BB7C00F61F18 /* Emojis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
+		7F192E392605861F00364929 /* SettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsList.swift; sourceTree = "<group>"; };
 		7F243CCD26028B05007DF29A /* ContactsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsList.swift; sourceTree = "<group>"; };
 		7F243CD126028B15007DF29A /* ContactsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRow.swift; sourceTree = "<group>"; };
 		7F243CD526028B23007DF29A /* ContactsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetail.swift; sourceTree = "<group>"; };
@@ -118,6 +121,14 @@
 			path = Emojis;
 			sourceTree = "<group>";
 		};
+		7F192E362605852500364929 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7F192E392605861F00364929 /* SettingsList.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		7F243CD926028CE2007DF29A /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +161,7 @@
 		7F24631D2601732D002385D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F192E362605852500364929 /* Settings */,
 				7F1682B12602BB6900F61F18 /* EmojiPicker */,
 				7F16826E2602A66500F61F18 /* Navigations */,
 				7F243CD926028CE2007DF29A /* Contacts */,
@@ -342,6 +354,7 @@
 				7F24633C26017AF2002385D7 /* DataStoreModel.swift in Sources */,
 				7F24633226017554002385D7 /* ColorExtension.swift in Sources */,
 				7F24632B2601753E002385D7 /* AppColorsModel.swift in Sources */,
+				7F192E3A2605861F00364929 /* SettingsList.swift in Sources */,
 				7F24633326017554002385D7 /* BindingExtension.swift in Sources */,
 				7F24633426017554002385D7 /* DateFormatterExtension.swift in Sources */,
 				7F1682B62602BB6900F61F18 /* EmojiPicker.swift in Sources */,
@@ -367,6 +380,7 @@
 				7F41744526007F9400AD22BD /* ContentView.swift in Sources */,
 				7F1682822602AE1800F61F18 /* ContactsRow.swift in Sources */,
 				7F1682912602AE7D00F61F18 /* AppColorsModel.swift in Sources */,
+				7F192E3D2605885500364929 /* SettingsList.swift in Sources */,
 				7F1682782602AAAE00F61F18 /* TabBarView.swift in Sources */,
 				7F41744326007F9400AD22BD /* ContactsDemoApp.swift in Sources */,
 				7F1682A02602AEB100F61F18 /* ColorExtension.swift in Sources */,

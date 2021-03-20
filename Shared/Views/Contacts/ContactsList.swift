@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactsList: View {
-    
+    // MARK: - Data model
     @EnvironmentObject var datastore : DataStore
     
     @State private var showModalAddContact = false
@@ -29,12 +29,12 @@ struct ContactsList: View {
             //AddContact
             ToolbarItem(placement: .primaryAction){
                 Button(action: showForm) {
-                    Label("New", systemImage: "person.crop.circle.fill.badge.plus")
+                    Label("New", systemImage: "person.crop.circle.fill.badge.plus") .foregroundColor(datastore.getColor())
                 }
             }
         }
         .sheet(isPresented: $showModalAddContact){
-            ContactsFormWindow(contact: $contactModel , save: savecontact)
+            ContactsFormWindow(contact: $contactModel , save: savecontact).accentColor(datastore.getColor())
         }
     }
     

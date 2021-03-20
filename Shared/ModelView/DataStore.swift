@@ -42,12 +42,25 @@ class DataStore: ObservableObject {
         data.contacts.append(contact)
         save()
     }
-    
+    //Delete contact
     func deleteContact(at offsets: IndexSet) {
         objectWillChange.send()
         data.contacts.remove(atOffsets: offsets)
         save()
     }
   
+    //Get accentColor
+    func getColor()->Color {
+        let index = data.accentColor
+        return AppColorsModel.colors[index].color
+    }
+    
+    //Change accent color
+    func changeAccentColor(index : Int){
+        objectWillChange.send()
+        data.accentColor = index
+        save()
+    }
+    
     
 }

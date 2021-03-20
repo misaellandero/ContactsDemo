@@ -11,7 +11,8 @@ struct TabBarView: View {
     
     // MARK: - current section selected
     @Binding var sectionSelected : SectionSelected?
-    
+    // MARK: - Data model
+    @EnvironmentObject var datastore : DataStore
     var body: some View {
         TabView(selection: $sectionSelected){
             // MARK: - Contacts
@@ -27,7 +28,8 @@ struct TabBarView: View {
             
             // MARK: - Settings
             NavigationView{
-                Text("Settings")
+                SettingsList()
+                .navigationTitle("Settings")
             }
             .tabItem {
                 Label("Settings", systemImage: "gear")

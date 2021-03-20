@@ -70,6 +70,9 @@ struct ContactsFormNew: View {
     @Binding var contact : ContactModel
     let save : () -> Void
     
+    // MARK: - Data model
+    @EnvironmentObject var datastore : DataStore
+    
     // MARK: - Screen Size for determining ipad or iphone screen
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
@@ -124,7 +127,7 @@ struct ContactsFormNew: View {
                         .foregroundColor(.white)
                     Spacer()
                 }
-            }.listRowBackground(Color.blue)
+            }.listRowBackground(datastore.getColor())
         }
         
         

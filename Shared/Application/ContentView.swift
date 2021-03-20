@@ -18,6 +18,10 @@ struct ContentView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #endif
     
+    // MARK: - Data model
+    @EnvironmentObject var datastore : DataStore
+    
+    
     // MARK: - current section selected
     @State var sectionSelected : SectionSelected? = .all
     
@@ -26,8 +30,10 @@ struct ContentView: View {
             #if os(iOS)
             if horizontalSizeClass == .compact {
                 TabBarView(sectionSelected : $sectionSelected)
+                    .accentColor(datastore.getColor())
             } else {
                 SideBarView(sectionSelected : $sectionSelected)
+                    .accentColor(datastore.getColor())
             }
             #elseif os(macOS)
             SideBarView(sectionSelected : $sectionSelected)

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContactsRow: View {
+    // MARK: - Data model
+    @EnvironmentObject var datastore : DataStore
     let contact : ContactModel
     var body: some View {
         HStack{
@@ -23,16 +25,17 @@ struct ContactsRow: View {
                     HStack{
                         Text(contact.type.localizedName)
                             .font(.caption)
-                            .foregroundColor(.primary)
-                            .padding(1)
+                            .foregroundColor(.white)
+                            .padding(2)
                     }
-                    .background(Color.secondary)
+                    .background(datastore.getColor())
                     .cornerRadius(20)
                 }
             }
             Spacer()
              
         }
+        .foregroundColor(datastore.getColor())
         .padding()
     }
 }

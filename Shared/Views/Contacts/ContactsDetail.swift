@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ContactsDetail: View {
+struct ContactsDetail: View { 
+    // MARK: - Data model
+    @EnvironmentObject var datastore : DataStore
     let contact : ContactModel
     var body: some View {
         List{
@@ -37,9 +39,10 @@ struct ContactsDetail: View {
                 Button(action:callPhone){
                     Label("Call", systemImage: "phone.fill")
                 }
+                .accentColor(datastore.getColor())
                 
             }
-        } 
+        }
     }
     
     func callPhone(){
