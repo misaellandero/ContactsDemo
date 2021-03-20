@@ -22,16 +22,8 @@ struct TabBarView: View {
             .tabItem {
                 Label("Contacts", systemImage: "person.2.fill")
             }
-            .tag(SectionSelected.contacts)
-            
-            // MARK: - Tags
-            NavigationView{
-                Text("Tags")
-            }
-            .tabItem {
-                Label("Tags", systemImage: "tag.fill")
-            }
-            .tag(SectionSelected.tags)
+            .tag(SectionSelected.all)
+             
             
             // MARK: - Settings
             NavigationView{
@@ -47,6 +39,6 @@ struct TabBarView: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView(sectionSelected: .constant(.contacts))
+        TabBarView(sectionSelected: .constant(.all))
     }
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContactsRow: View {
     let contact : ContactModel
-    let tags : [TagModel]
     var body: some View {
         HStack{
             Text(contact.emoji)
@@ -19,14 +18,20 @@ struct ContactsRow: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
                 
-                Text(contact.name)
-            }
-            Spacer()
-            Group{
-                ForEach(tags, id: \.id){ tag in
-                    TagLabel(tag: tag)
+                HStack{
+                    Text(contact.name)
+                    HStack{
+                        Text(contact.type.localizedName)
+                            .font(.caption)
+                            .foregroundColor(.primary)
+                            .padding(1)
+                    }
+                    .background(Color.secondary)
+                    .cornerRadius(20)
                 }
             }
+            Spacer()
+             
         }
         .padding()
     }
@@ -36,10 +41,10 @@ struct ContactsRow_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        ContactsRow(contact: ContactModel.sampleContact, tags: TagModel.sampleTagsList)
+        ContactsRow(contact: ContactModel.sampleContact)
             .previewLayout(.fixed(width: 400, height: 90))
             .preferredColorScheme(.dark)
-        ContactsRow(contact: ContactModel.sampleContact, tags: TagModel.sampleTagsList)
+        ContactsRow(contact: ContactModel.sampleContact )
             .previewLayout(.fixed(width: 400, height: 90))
     }
 }

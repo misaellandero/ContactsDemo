@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum SectionSelected {
-    case contacts,tags,settings
+    case all,family, friend, coworker, settings
 }
 
 struct ContentView: View {
@@ -19,7 +19,7 @@ struct ContentView: View {
     #endif
     
     // MARK: - current section selected
-    @State var sectionSelected : SectionSelected? = .contacts
+    @State var sectionSelected : SectionSelected? = .all
     
     var body: some View {
         Group{

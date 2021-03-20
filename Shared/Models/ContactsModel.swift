@@ -7,17 +7,25 @@
 
 import SwiftUI
 
+enum contactType : String, Codable, Equatable, CaseIterable {
+    case family = "Family", friend = "Friend", coworker = "Co-Worker"
+    
+    var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
+}
+
 struct ContactModel : Identifiable, Codable {
+    
+     
     // MARK: - For Identifiable
     var id = UUID()
     
     // MARK: - Contact Data
     var name : String
     var emoji : String
-    var tags : [UUID]
     var email : String
     var number : String
     var birthDate : Date
+    var type: contactType
     
     // MARK: - Computed Properities
     //Get date formated
@@ -34,19 +42,19 @@ struct ContactModel : Identifiable, Codable {
     // MARK: - sampleData
     static var newContactTemplate : ContactModel {
         
-        return ContactModel(id: UUID(), name: "", emoji: "🙂", tags: [], email: " ", number: "", birthDate: Date())
+        return ContactModel(id: UUID(), name: "", emoji: "🙂", email: "", number: "", birthDate: Date(), type: .coworker)
     }
     
     static var sampleContact : ContactModel {
         
-        return ContactModel(id: UUID(), name: "Juan Perez", emoji: "👨🏻‍💼", tags: [UUID(),UUID()], email: "juan@perez.com", number: "5566123234", birthDate: Date())
+        return ContactModel(id: UUID(), name: "Juan Perez", emoji: "👨🏻‍💼", email: "juan@perez.com", number: "5566123234", birthDate: Date(), type: .coworker)
     }
     
     static var sampleContactList : [ContactModel] {
         return [
-            ContactModel(id: UUID(), name: "Juan Perez", emoji: "👨🏻‍💼", tags: [UUID(),UUID()], email: "juan@perez.com", number: "5566123234", birthDate: Date()),
-            ContactModel(id: UUID(), name: "Maria Hernadez", emoji: "👩🏼", tags: [UUID(),UUID()], email: "maria@hernandez.com", number: "5566123234", birthDate: Date()),
-            ContactModel(id: UUID(), name: "Pedro Lara", emoji: "👴🏽", tags: [UUID(),UUID()], email: "pedro@lara.com", number: "5566123234", birthDate: Date())
+            ContactModel(id: UUID(), name: "Juan Perez", emoji: "👨🏻‍💼",  email: "juan@perez.com", number: "5566123234", birthDate: Date(), type: .coworker),
+            ContactModel(id: UUID(), name: "Maria Hernadez", emoji: "👩🏼",email: "maria@hernandez.com", number: "5566123234", birthDate: Date(), type: .coworker),
+            ContactModel(id: UUID(), name: "Pedro Lara", emoji: "👴🏽",email: "pedro@lara.com", number: "5566123234", birthDate: Date(), type: .coworker)
                 ]
     }
     

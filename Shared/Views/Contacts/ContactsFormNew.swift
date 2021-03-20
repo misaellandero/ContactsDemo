@@ -23,6 +23,7 @@ struct ContactsFormWindow: View {
             List{
                 ContactsFormNew(contact: $contact, save: save)
             }
+            .listStyle(InsetGroupedListStyle())
             .navigationTitle("New Contact")
                 .toolbar {
                     ToolbarItem(placement: .primaryAction ){
@@ -43,13 +44,16 @@ struct ContactsFormWindow: View {
                 }
             }
             .padding()
-            List{
+            //List{
+            Form{
                 ContactsFormNew(contact: $contact, save: save)
             }
-            .listStyle(SidebarListStyle())
-            .frame(width: 400, height: 400)
+                
+            //}
+            //.listStyle(SidebarListStyle())
+            //.frame(width: 400, height: 400)
         }
-        
+        .padding()
          
         #endif
          
@@ -72,63 +76,66 @@ struct ContactsFormNew: View {
     #endif
     
     var body: some View {
-            HStack{
-                Button(action:showEmojiPicker){
-                    Text(contact.emoji)
-                        .scaleEffect(animate ? 1.2 : 1)
-                        .animation(.easeInOut)
-                }
-                .popover(
-                    isPresented: self.$showPopoverEmoji,
-                    arrowEdge: .top
-                ) {
-                    #if os(iOS)
-                    if horizontalSizeClass == .compact {
-                        EmojiSelecter(emoji: $contact.emoji.onChange(showChange))
-                    } else {
-                        EmojiPicker(emoji: $contact.emoji.onChange(showChange))
-                    }
-                    #elseif os(macOS)
-                    EmojiPicker(emoji: $contact.emoji.onChange(showChange))
-                    #endif
-                }
-                
-                TextField("Name", text: $contact.name)
-            }
-            
-            HStack{
-                TextField("Email", text: $contact.email)
-            }
-            
-            HStack{
-                TextField("Phone", text: $contact.number)
-            }
-            
-            DatePicker("Birthday", selection: $contact.birthDate)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-            
         HStack{
-            Button(action:showAddTagsPicker){
-                Text("\(Image(systemName: "tag.fill")) Select tags")
+            Button(action:showEmojiPicker){
+                Text(contact.emoji)
+                    .scaleEffect(animate ? 1.2 : 1)
+                    .animation(.easeInOut)
             }
             .popover(
-                isPresented: self.$showPopoverAddTags,
+                isPresented: self.$showPopoverEmoji,
                 arrowEdge: .top
             ) {
-                TagWindow(showPicker: $showPopoverAddTags, tags: $contact.tags)
+                #if os(iOS)
+                if horizontalSizeClass == .compact {
+                    EmojiSelecter(emoji: $contact.emoji.onChange(showChange))
+                } else {
+                    EmojiPicker(emoji: $contact.emoji.onChange(showChange))
+                }
+                #elseif os(macOS)
+                EmojiPicker(emoji: $contact.emoji.onChange(showChange))
+                #endif
             }
             
-            Button(action:showTagsPicker){
-                Text("\(Image(systemName: "plus.circle.fill")) Add tag")
-            }
-            .popover(
-                isPresented: self.$showPopoverTags,
-                arrowEdge: .top
-            ) {
-                TagFormWindow(showPicker: $showPopoverTags)
+            TextField("Name", text: $contact.name)
+        }
+        Picker("Type", selection: $contact.type){
+            ForEach(contactType.allCases, id: \.self){ value in
+                Text(value.localizedName)
+                    .tag(value)
             }
         }
+        HStack{
+            TextField("Email", text: $contact.email)
+        }
         
+        HStack{
+            TextField("Phone", text: $contact.number)
+        }
+        
+        DatePicker("Birthday", selection: $contact.birthDate)
+            //.datePickerStyle(GraphicalDatePickerStyle())
+        #if os(iOS)
+        Section(){
+            Button(action:save){
+                HStack{
+                    Spacer()
+                    Label("Save", systemImage: "person.crop.circle.fill.badge.plus").padding()
+                        .foregroundColor(.white)
+                    Spacer()
+                }
+            }.listRowBackground(Color.blue)
+        }
+        
+        
+        #elseif os(macOS)
+        HStack{
+            Spacer()
+            Button(action:save){
+                Label("Save", systemImage: "person.crop.circle.fill.badge.plus")
+            }
+        }
+        #endif
     }
     
     func showChange(_ tag: String){

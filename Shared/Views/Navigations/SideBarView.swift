@@ -16,13 +16,10 @@ struct SideBarView: View {
         NavigationView{
             // MARK: - Side bar
             List(selection: $sectionSelected) {
-                NavigationLink(destination: ContactsList(), tag: SectionSelected.contacts, selection: $sectionSelected) {
+                NavigationLink(destination: ContactsList(), tag: SectionSelected.all, selection: $sectionSelected) {
                     Label("Contacts", systemImage: "person.2.fill")
                 }
                 
-                NavigationLink(destination: Text("Tags"), tag: SectionSelected.tags, selection: $sectionSelected) {
-                    Label("Tags", systemImage: "tag.fill")
-                }
                 
                 NavigationLink(destination: Text("Settings"), tag: SectionSelected.settings, selection: $sectionSelected) {
                     Label("Settings", systemImage: "gear")
@@ -64,6 +61,6 @@ struct SideBarView: View {
 
 struct SideBarView_Previews: PreviewProvider {
     static var previews: some View {
-        SideBarView(sectionSelected: .constant(.contacts))
+        SideBarView(sectionSelected: .constant(.all))
     }
 }

@@ -18,19 +18,37 @@ struct ContactsList: View {
     var body: some View {
         List{
             ForEach(datastore.data.contacts, id: \.id){ contact in
-                ContactsRow(contact: contact, tags: datastore.getContacTags(contact: contact))
-            }
+               NavigationLink(
+                destination: ContactsDetail(contact: contact),
+                label: {
+                    ContactsRow(contact: contact)
+                })
+            }.onDelete(perform: datastore.deleteContact)
         }
         .toolbar {
             //AddContact
             ToolbarItem(placement: .primaryAction){
-                Button(action: {showModalAddContact.toggle()}) {
+                Button(action: showForm) {
                     Label("New", systemImage: "person.crop.circle.fill.badge.plus")
                 }
             }
         }
         .sheet(isPresented: $showModalAddContact){
-            ContactsFormWindow(contact: $contactModel , save: {})
+            ContactsFormWindow(contact: $contactModel , save: savecontact)
+        }
+    }
+    
+    func showForm(){
+        withAnimation(.spring()){
+            showModalAddContact.toggle()
+        }
+    }
+    
+    func savecontact(){
+        datastore.addNewContact(contact: contactModel)
+        contactModel = ContactModel(id: UUID(), name: "", emoji: "", email: "", number: "", birthDate: Date(), type: .friend)
+        withAnimation(.spring()){
+            showModalAddContact.toggle()
         }
     }
 }

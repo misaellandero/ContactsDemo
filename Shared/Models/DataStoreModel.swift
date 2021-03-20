@@ -9,8 +9,6 @@ import SwiftUI
 
 struct DataStoreModel: Codable {
     var contacts : [ContactModel]
-    var tags : [TagModel]
-     
 }
 
  

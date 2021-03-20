@@ -26,7 +26,7 @@ class DataStore: ObservableObject {
         }
         
         // if we dont have data create a new instace
-        self.data = DataStoreModel(contacts: [ContactModel](), tags: [TagModel]())
+        self.data = DataStoreModel(contacts: [ContactModel]())
     }
     
     //Save data to userDeafults on everychange
@@ -43,42 +43,11 @@ class DataStore: ObservableObject {
         save()
     }
     
-    //AddTag
-    func addNewTag(tag : TagModel){
+    func deleteContact(at offsets: IndexSet) {
         objectWillChange.send()
-        data.tags.append(tag)
+        data.contacts.remove(atOffsets: offsets)
         save()
     }
-    /*
-    mutating func addContact(contact : ContactModel){
-        contacts.append(contact)
-    }
-    
-    func removesContact(contact : ContactModel){
-        if let index = contacts.firstIndex(of: contact) {
-            contacts.remove(at: index)
-        }
-    }
-     
-    mutating func addTag(tag : TagModel){
-        tags.append(tag)
-    }
-    
-    func removesTag(tag : TagModel){
-        if let index = tags.firstIndex(of: tag) {
-            tags.remove(at: index)
-        }
-    }
- */
-    
-    func getContacTags(contact: ContactModel) -> [TagModel]{
-        var contactTags =  [TagModel]()
-        for tagid in contact.tags {
-            if let i = data.tags.firstIndex(where: { $0.id == tagid }) {
-                contactTags.append(data.tags[i])
-            }
-        }
-        return contactTags
-    }
+  
     
 }
